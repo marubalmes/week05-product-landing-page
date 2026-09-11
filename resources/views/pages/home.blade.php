@@ -2,64 +2,62 @@
 
 @section('content')
 
-    {{-- Hero Section --}}
+    {{-- Hero --}}
     <x-hero />
 
-    {{-- Features Section --}}
-    <section id="features" class="bg-white py-20">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
 
+    {{-- Services Section --}}
+    <section id="services" class="relative bg-black py-24 sm:py-32">
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(180,130,10,0.05)_0%,_transparent_60%)]"></div>
+
+        <div class="relative mx-auto max-w-7xl px-6 lg:px-8">
             <div class="mx-auto max-w-2xl text-center">
-                <p class="text-sm font-semibold uppercase tracking-widest text-orange-600">
-                    Why Choose Dolfo's
-                </p>
-
-                <h2 class="mt-3 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                    Everything you need for a fresh look
+                <p class="text-xs font-semibold uppercase tracking-[0.25em] text-yellow-500">Our Services</p>
+                <h2 class="mt-4 font-serif text-4xl font-bold text-white sm:text-5xl">
+                    Crafted for the<br>modern gentleman.
                 </h2>
-
-                <p class="mt-4 text-lg leading-8 text-gray-600">
-                    Experience quality barbering services from a local team
-                    committed to making every visit comfortable and worthwhile.
+                <div class="gold-divider mx-auto mt-6"></div>
+                <p class="mt-6 text-base leading-8 text-zinc-400">
+                    Every service at Dolfo's is delivered with precision, care, and a commitment to making you look and feel your best.
                 </p>
             </div>
 
-            <div class="mx-auto mt-12 grid max-w-7xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div class="mx-auto mt-16 grid max-w-7xl grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
 
                 <x-feature-card
-                    icon="✂️"
-                    title="Classic Haircuts"
-                    description="Get a clean and polished haircut suited to your preferred style."
+                    icon="✂"
+                    title="Classic Haircut"
+                    description="A clean, precise cut tailored to your style — from fades to classic taper cuts."
                 />
 
                 <x-feature-card
                     icon="💈"
-                    title="Skilled Team"
-                    description="Mike, Mel, and Unyo are ready to provide a quality barbering experience."
+                    title="Expert Barbers"
+                    description="Mike, Mel, and Unyo bring skill and passion to every chair, every time."
                 />
 
                 <x-feature-card
                     icon="📍"
-                    title="Local Location"
-                    description="Conveniently located in Santa Cruz, Laguna for the local community."
+                    title="Prime Location"
+                    description="Conveniently located at A. Regidor Street, Barangay V, Santa Cruz, Laguna."
                 />
 
                 <x-feature-card
                     icon="🕐"
-                    title="Convenient Visit"
-                    description="Enjoy a straightforward barber shop experience without unnecessary complications."
+                    title="Flexible Hours"
+                    description="Open Monday through Saturday so you can book a visit that fits your schedule."
                 />
 
                 <x-feature-card
                     icon="⭐"
-                    title="Shop Experience"
-                    description="A welcoming local barber shop focused on a clean and comfortable experience."
+                    title="Premium Experience"
+                    description="A clean, welcoming shop atmosphere designed for comfort and quality."
                 />
 
                 <x-feature-card
                     icon="📞"
-                    title="Easy Contact"
-                    description="Get in touch with the shop for questions, services, and other inquiries."
+                    title="Easy Booking"
+                    description="Reach out to the shop directly for appointments, inquiries, and service details."
                 />
 
             </div>
@@ -67,51 +65,48 @@
     </section>
 
 
-    {{-- Product Showcase Section --}}
+    {{-- Showcase --}}
     <x-showcase />
 
 
     {{-- Pricing Section --}}
-    <section id="pricing" class="bg-gray-50 py-20">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <section id="pricing" class="relative bg-black py-24 sm:py-32">
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,_rgba(180,130,10,0.05)_0%,_transparent_60%)]"></div>
 
+        <div class="relative mx-auto max-w-7xl px-6 lg:px-8">
             <div class="mx-auto max-w-2xl text-center">
-                <p class="text-sm font-semibold uppercase tracking-widest text-orange-600">
-                    Sample Packages
-                </p>
-
-                <h2 class="mt-3 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                    Choose your barbering package
+                <p class="text-xs font-semibold uppercase tracking-[0.25em] text-yellow-500">Pricing</p>
+                <h2 class="mt-4 font-serif text-4xl font-bold text-white sm:text-5xl">
+                    Choose your package.
                 </h2>
-
-                <p class="mt-4 text-lg text-gray-600">
-                    These prices are sample/demo packages for the school project.
-                    Please confirm actual prices with Dolfo's Barbershop.
+                <div class="gold-divider mx-auto mt-6"></div>
+                <p class="mt-6 text-sm text-zinc-500">
+                    Sample packages for demonstration purposes. Please confirm current pricing directly with Dolfo's Barbershop.
                 </p>
             </div>
 
-            <div class="mx-auto mt-12 grid max-w-6xl grid-cols-1 gap-8 md:grid-cols-3">
+            <div class="mx-auto mt-16 grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-3">
 
                 <x-pricing-card
-                    name="Starter"
+                    name="Classic"
                     price="₱150"
-                    description="A simple haircut package."
+                    description="The essentials, done right."
                     :features="[
-                        'Basic haircut',
-                        'Professional service',
-                        'Local barber shop experience'
+                        'Classic haircut',
+                        'Professional finish',
+                        'Welcoming shop experience',
                     ]"
                 />
 
                 <x-pricing-card
-                    name="Professional"
+                    name="Signature"
                     price="₱250"
-                    description="A more complete grooming experience."
+                    description="Our most popular grooming package."
                     :features="[
-                        'Haircut',
-                        'Styling',
-                        'Professional barber service',
-                        'Comfortable shop experience'
+                        'Precision haircut',
+                        'Style & finish',
+                        'Expert barber service',
+                        'Comfortable shop experience',
                     ]"
                     featured="true"
                 />
@@ -119,12 +114,12 @@
                 <x-pricing-card
                     name="Premium"
                     price="₱350"
-                    description="A complete premium-style package."
+                    description="The full Dolfo's experience."
                     :features="[
                         'Premium haircut',
-                        'Styling',
-                        'Grooming service',
-                        'Professional barber service'
+                        'Styling & grooming',
+                        'Hot towel treatment',
+                        'Full barber service',
                     ]"
                 />
 
@@ -133,43 +128,38 @@
     </section>
 
 
-    {{-- Testimonials Section --}}
-    <section id="testimonials" class="bg-white py-20">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
-
+    {{-- Testimonials --}}
+    <section id="testimonials" class="relative bg-zinc-950 py-24 sm:py-32">
+        <div class="relative mx-auto max-w-7xl px-6 lg:px-8">
             <div class="mx-auto max-w-2xl text-center">
-                <p class="text-sm font-semibold uppercase tracking-widest text-orange-600">
-                    Testimonials
-                </p>
-
-                <h2 class="mt-3 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                    What customers might say
+                <p class="text-xs font-semibold uppercase tracking-[0.25em] text-yellow-500">Client Reviews</p>
+                <h2 class="mt-4 font-serif text-4xl font-bold text-white sm:text-5xl">
+                    What our clients say.
                 </h2>
-
-                <p class="mt-4 text-lg text-gray-600">
-                    The following testimonials are sample content created for
-                    this academic project.
+                <div class="gold-divider mx-auto mt-6"></div>
+                <p class="mt-6 text-sm text-zinc-500">
+                    Sample testimonials created for this academic project.
                 </p>
             </div>
 
-            <div class="mx-auto mt-12 grid max-w-6xl grid-cols-1 gap-8 md:grid-cols-3">
+            <div class="mx-auto mt-16 grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-3">
 
                 <x-testimonial-card
-                    name="Sample Customer 01"
-                    position="Customer"
-                    review="The service was friendly and the haircut gave me a clean and fresh look."
+                    name="Juan dela Cruz"
+                    position="Regular Client"
+                    review="Best barbershop in Santa Cruz. The fade is always clean and the atmosphere is top-notch."
                 />
 
                 <x-testimonial-card
-                    name="Sample Customer 02"
-                    position="Customer"
-                    review="A convenient local barber shop with a welcoming atmosphere."
+                    name="Marco Reyes"
+                    position="Regular Client"
+                    review="Mike always knows exactly what I want. Consistent quality every single visit."
                 />
 
                 <x-testimonial-card
-                    name="Sample Customer 03"
-                    position="Customer"
-                    review="The barbers were professional and made the visit comfortable."
+                    name="Carlo Santos"
+                    position="Regular Client"
+                    review="Dolfo's is the only place I trust for a proper cut. Professional, clean, and friendly."
                 />
 
             </div>
@@ -177,36 +167,27 @@
     </section>
 
 
-    {{-- Call To Action --}}
-    <section id="contact" class="bg-orange-600 py-20">
-        <div class="mx-auto max-w-4xl px-6 text-center lg:px-8">
+    {{-- CTA Section --}}
+    <section id="contact" class="relative overflow-hidden bg-black py-24 sm:py-32">
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(180,130,10,0.1)_0%,_transparent_65%)]"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_rgba(180,130,10,0.06)_0%,_transparent_50%)]"></div>
 
-            <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-                Ready for a fresh look?
+        <div class="relative mx-auto max-w-3xl px-6 text-center lg:px-8">
+            <p class="text-xs font-semibold uppercase tracking-[0.25em] text-yellow-500">Ready?</p>
+            <h2 class="mt-4 font-serif text-4xl font-bold text-white sm:text-5xl lg:text-6xl">
+                Your best look<br>starts here.
             </h2>
-
-            <p class="mx-auto mt-5 max-w-2xl text-lg leading-8 text-orange-50">
-                Visit Dolfo's Barbershop in Santa Cruz, Laguna and experience
-                a local barbering service from Mike, Mel, and Unyo.
+            <div class="gold-divider mx-auto mt-6"></div>
+            <p class="mx-auto mt-6 max-w-xl text-base leading-8 text-zinc-400">
+                Visit Dolfo's Barbershop at A. Regidor Street, Santa Cruz, Laguna and let Mike, Mel, or Unyo take care of the rest.
             </p>
 
-            <div class="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-
-                <x-button
-                    href="#pricing"
-                    variant="secondary"
-                >
-                    View Packages
-                </x-button>
-
-                <x-button
-                    href="#contact"
-                    variant="outline"
-                >
-                    Contact Shop
-                </x-button>
-
+            <div class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+                <x-button href="#pricing" variant="primary">View Packages</x-button>
+                <x-button href="tel:+63" variant="outline">Call the Shop</x-button>
             </div>
+
+            <p class="mt-8 text-xs text-zinc-600">A. Regidor Street · Barangay V · Santa Cruz, Laguna</p>
         </div>
     </section>
 

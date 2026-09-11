@@ -1,59 +1,60 @@
-<section id="showcase" class="bg-zinc-950 py-20 text-white sm:py-24">
-    <div class="mx-auto max-w-7xl px-6 lg:px-8">
-        <div class="grid gap-12 lg:grid-cols-2 lg:items-center">
+<section id="showcase" class="relative overflow-hidden bg-zinc-950 py-24 sm:py-32">
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(180,130,10,0.06)_0%,_transparent_70%)]"></div>
+
+    <div class="relative mx-auto max-w-7xl px-6 lg:px-8">
+        <div class="grid gap-16 lg:grid-cols-2 lg:items-center">
+
+            {{-- Left: Content --}}
             <div>
-                <p class="text-sm font-bold uppercase tracking-[0.25em] text-amber-400">Product Showcase</p>
-                <h2 class="mt-3 text-3xl font-black tracking-tight sm:text-4xl">
-                    The shop, team, and experience in one place
+                <p class="text-xs font-semibold uppercase tracking-[0.25em] text-yellow-500">The Experience</p>
+                <h2 class="mt-4 font-serif text-4xl font-bold leading-tight text-white sm:text-5xl">
+                    Craftsmanship in<br>every detail.
                 </h2>
-                <p class="mt-5 text-base leading-7 text-zinc-300">
-                    This showcase section fulfills the laboratory requirement for a product screenshot, dashboard preview,
-                    mobile view, and key highlights by presenting the business website itself as the digital product.
+                <div class="gold-divider mt-6"></div>
+                <p class="mt-6 text-base leading-8 text-zinc-400">
+                    At Dolfo's, barbering is more than a service — it's a craft. Our team of skilled barbers brings precision, style, and a welcoming atmosphere to every visit.
                 </p>
 
-                <div class="mt-8 grid gap-4 sm:grid-cols-2">
-                    <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
-                        <p class="text-sm font-bold text-amber-400">Screenshot</p>
-                        <p class="mt-2 text-sm leading-6 text-zinc-300">Actual supplied shop photo used as the primary visual.</p>
+                <div class="mt-10 grid gap-4 sm:grid-cols-2">
+                    <div class="rounded-xl border border-white/8 bg-white/3 p-5 transition hover:border-yellow-600/20">
+                        <p class="text-xs font-semibold uppercase tracking-widest text-yellow-500">Precision Cuts</p>
+                        <p class="mt-2 text-sm leading-6 text-zinc-400">Every haircut is tailored to your face shape and personal style.</p>
                     </div>
-                    <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
-                        <p class="text-sm font-bold text-amber-400">Dashboard Preview</p>
-                        <p class="mt-2 text-sm leading-6 text-zinc-300">Landing-page interface preview built from reusable components.</p>
+                    <div class="rounded-xl border border-white/8 bg-white/3 p-5 transition hover:border-yellow-600/20">
+                        <p class="text-xs font-semibold uppercase tracking-widest text-yellow-500">Expert Team</p>
+                        <p class="mt-2 text-sm leading-6 text-zinc-400">Mike, Mel, and Unyo bring years of experience to the chair.</p>
                     </div>
-                    <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
-                        <p class="text-sm font-bold text-amber-400">Mobile View</p>
-                        <p class="mt-2 text-sm leading-6 text-zinc-300">Responsive grid and stacked layout for smaller screens.</p>
+                    <div class="rounded-xl border border-white/8 bg-white/3 p-5 transition hover:border-yellow-600/20">
+                        <p class="text-xs font-semibold uppercase tracking-widest text-yellow-500">Clean Space</p>
+                        <p class="mt-2 text-sm leading-6 text-zinc-400">A well-maintained, comfortable shop you'll want to return to.</p>
                     </div>
-                    <div class="rounded-2xl border border-white/10 bg-white/5 p-5">
-                        <p class="text-sm font-bold text-amber-400">Key Highlights</p>
-                        <p class="mt-2 text-sm leading-6 text-zinc-300">Features, packages, team, testimonials, and contact details.</p>
+                    <div class="rounded-xl border border-white/8 bg-white/3 p-5 transition hover:border-yellow-600/20">
+                        <p class="text-xs font-semibold uppercase tracking-widest text-yellow-500">Local Pride</p>
+                        <p class="mt-2 text-sm leading-6 text-zinc-400">Proudly serving the Santa Cruz, Laguna community.</p>
                     </div>
                 </div>
             </div>
 
-            <div class="rounded-[2rem] bg-white p-3 shadow-2xl">
-                <div class="overflow-hidden rounded-[1.5rem] bg-stone-100">
+            {{-- Right: Image --}}
+            <div class="relative">
+                <div class="absolute -inset-4 rounded-[2.5rem] bg-yellow-600/8 blur-2xl"></div>
+                <div class="relative overflow-hidden rounded-[2rem] border border-white/10 bg-zinc-900 p-2 shadow-2xl">
                     <img
                         src="{{ asset('images/dolfos-barbershop.png') }}"
-                        alt="Dolfo's Barbershop showcase"
-                        class="h-[460px] w-full object-cover"
+                        alt="Dolfo's Barbershop"
+                        class="h-[420px] w-full rounded-[1.6rem] object-cover"
                     >
-                    <div class="grid grid-cols-3 gap-3 p-4">
-                        <div class="rounded-xl bg-white p-3 text-center shadow-sm">
-                            <p class="text-lg font-black text-zinc-950">Mike</p>
-                            <p class="text-xs text-zinc-500">Employee</p>
+                    <div class="grid grid-cols-3 gap-2 p-3">
+                        @foreach(['Mike', 'Mel', 'Unyo'] as $barber)
+                        <div class="rounded-xl border border-white/8 bg-zinc-800 p-3 text-center">
+                            <p class="font-serif text-sm font-bold text-white">{{ $barber }}</p>
+                            <p class="mt-0.5 text-xs text-yellow-500/70">Barber</p>
                         </div>
-                        <div class="rounded-xl bg-white p-3 text-center shadow-sm">
-                            <p class="text-lg font-black text-zinc-950">Mel</p>
-                            <p class="text-xs text-zinc-500">Employee</p>
-                        </div>
-                        <div class="rounded-xl bg-white p-3 text-center shadow-sm">
-                            <p class="text-lg font-black text-zinc-950">Unyo</p>
-                            <p class="text-xs text-zinc-500">Employee</p>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
+
         </div>
     </div>
 </section>

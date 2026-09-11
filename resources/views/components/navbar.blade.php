@@ -1,21 +1,25 @@
-<nav class="sticky top-0 z-50 border-b border-zinc-200/80 bg-white/95 backdrop-blur">
-    <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
-        <a href="#home" class="flex items-center gap-3 font-black tracking-tight text-zinc-950">
-            <span class="grid h-10 w-10 place-items-center rounded-2xl bg-zinc-950 text-lg text-amber-400">D</span>
-            <span class="hidden sm:block">Dolfo's Barbershop</span>
+<nav class="sticky top-0 z-50 border-b border-white/5 bg-black/90 backdrop-blur-xl">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-8">
+
+        <a href="#home" class="flex items-center gap-3 group">
+            <div class="flex h-10 w-10 items-center justify-center rounded-full border border-yellow-600/40 bg-yellow-600/10 text-yellow-500 font-serif font-bold text-lg transition group-hover:border-yellow-500/70 group-hover:bg-yellow-600/20">
+                D
+            </div>
+            <span class="font-serif text-lg font-bold tracking-wide text-white hidden sm:block">
+                Dolfo's <span class="text-yellow-500">Barbershop</span>
+            </span>
         </a>
 
-        <div class="hidden items-center gap-6 lg:flex">
-            <a href="#home" class="text-sm font-semibold text-zinc-700 transition hover:text-amber-600">Home</a>
-            <a href="#features" class="text-sm font-semibold text-zinc-700 transition hover:text-amber-600">Features</a>
-            <a href="#pricing" class="text-sm font-semibold text-zinc-700 transition hover:text-amber-600">Pricing</a>
-            <a href="#testimonials" class="text-sm font-semibold text-zinc-700 transition hover:text-amber-600">Testimonials</a>
-            <a href="#contact" class="text-sm font-semibold text-zinc-700 transition hover:text-amber-600">Contact</a>
+        <div class="hidden items-center gap-8 lg:flex">
+            <a href="#home" class="text-xs font-medium uppercase tracking-[0.15em] text-zinc-400 transition hover:text-yellow-400">Home</a>
+            <a href="#services" class="text-xs font-medium uppercase tracking-[0.15em] text-zinc-400 transition hover:text-yellow-400">Services</a>
+            <a href="#pricing" class="text-xs font-medium uppercase tracking-[0.15em] text-zinc-400 transition hover:text-yellow-400">Pricing</a>
+            <a href="#testimonials" class="text-xs font-medium uppercase tracking-[0.15em] text-zinc-400 transition hover:text-yellow-400">Reviews</a>
+            <a href="#contact" class="text-xs font-medium uppercase tracking-[0.15em] text-zinc-400 transition hover:text-yellow-400">Contact</a>
         </div>
 
-        <div class="flex items-center gap-2">
-            <x-button href="#contact" variant="ghost" class="hidden sm:inline-flex">Sign In</x-button>
-            <x-button href="#contact" variant="primary">Get Started</x-button>
+        <div class="flex items-center gap-3">
+            <x-button href="#contact" variant="outline" class="hidden sm:inline-flex">Book Now</x-button>
         </div>
     </div>
 </nav>
